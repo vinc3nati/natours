@@ -1,0 +1,21 @@
+/********************/
+/* Basic Reset */
+/********************/
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* so the 1rem = 10px or 62.5% */
+  font-size: 62.5%;
+}
+
+body {
+  /* so that the borders and paddings are no longer added */
+  box-sizing: border-box;
+}
