@@ -1,106 +1,3 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
-
-/********************/
-/* Basic Reset */
-/********************/
-
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
-html {
-  /* so the 1rem = 10px or 62.5% */
-  font-size: 62.5%;
-}
-
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
-  /* so that the borders and paddings are no longer added */
-  box-sizing: border-box;
-}
-
-.header {
-  height: 95vh;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(126, 213, 111, 0.8),
-      rgba(40, 180, 133, 0.8)
-    ),
-    url(../img/hero.jpg);
-
-  position: relative;
-  /* cover tries to fit the element within the viewport 
-  so it adapts nicely to the changing viewport size  */
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-}
-
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-}
-
-.header__logo {
-  height: 3.5rem;
-}
-
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  text-align: center;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-}
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  /*inordertofixtheshakynessofthetextwhenanimationends*/
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  margin-bottom: 6rem;
-}
-
-.heading-primary--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-}
-
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.75rem;
-  animation: moveInRight 3s ease-in;
-  -webkit-animation: moveInRight 1s ease-out;
-}
-
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -108,26 +5,20 @@ body {
     -webkit-transform: translateX(-10rem);
     -moz-transform: translateX(-10rem);
     -ms-transform: translateX(-10rem);
-    -o-transform: translateX(-10rem);
-  }
-
+    -o-transform: translateX(-10rem); }
   80% {
     transform: translateX(1rem);
     -webkit-transform: translateX(1rem);
     -moz-transform: translateX(1rem);
     -ms-transform: translateX(1rem);
-    -o-transform: translateX(1rem);
-  }
-
+    -o-transform: translateX(1rem); }
   100% {
     opacity: 1;
     transform: translate(0);
     -webkit-transform: translate(0);
     -moz-transform: translate(0);
     -ms-transform: translate(0);
-    -o-transform: translate(0);
-  }
-}
+    -o-transform: translate(0); } }
 
 @keyframes moveInRight {
   0% {
@@ -136,26 +27,20 @@ body {
     -webkit-transform: translateX(10rem);
     -moz-transform: translateX(10rem);
     -ms-transform: translateX(10rem);
-    -o-transform: translateX(10rem);
-  }
-
+    -o-transform: translateX(10rem); }
   80% {
     transform: translateX(-1rem);
     -webkit-transform: translateX(-1rem);
     -moz-transform: translateX(-1rem);
     -ms-transform: translateX(-1rem);
-    -o-transform: translateX(-1rem);
-  }
-
+    -o-transform: translateX(-1rem); }
   100% {
     opacity: 1;
     transform: translate(0);
     -webkit-transform: translate(0);
     -moz-transform: translate(0);
     -ms-transform: translate(0);
-    -o-transform: translate(0);
-  }
-}
+    -o-transform: translate(0); } }
 
 @keyframes moveInBottom {
   0% {
@@ -164,103 +49,158 @@ body {
     -webkit-transform: translateY(3rem);
     -moz-transform: translateY(3rem);
     -ms-transform: translateY(3rem);
-    -o-transform: translateY(3rem);
-  }
-
+    -o-transform: translateY(3rem); }
   100% {
     opacity: 1;
     transform: translate(0);
     -webkit-transform: translate(0);
     -moz-transform: translate(0);
     -ms-transform: translate(0);
-    -o-transform: translate(0);
-  }
-}
+    -o-transform: translate(0); } }
 
-/* since it is a link so we should do :link */
-.btn:link,
-.btn:visited /*since we want the link and visited state to look the same */ {
-  display: inline-block;
-  position: relative;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1.5rem 4rem;
-  font-size: 1.6rem;
-  border-radius: 10rem;
-  -webkit-border-radius: 10rem;
-  -moz-border-radius: 10rem;
-  -ms-border-radius: 10rem;
-  -o-border-radius: 10rem;
-  transition: all 0.2s;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -ms-transition: all 0.2s;
-  -o-transition: all 0.2s;
-}
+/********************/
+/* Basic Reset */
+/********************/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
 
-.btn:hover {
-  transform: translateY(-3px);
-  -webkit-transform: translateY(-3px);
-  -moz-transform: translateY(-3px);
-  -ms-transform: translateY(-3px);
-  -o-transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-}
+html {
+  /* so the 1rem = 10px or 62.5% */
+  font-size: 62.5%; }
 
-/* when we click an element it is an active state */
-.btn:active {
-  transform: translateY(-1px);
-  -webkit-transform: translateY(-1px);
-  -moz-transform: translateY(-1px);
-  -ms-transform: translateY(-1px);
-  -o-transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-}
+body {
+  /* so that the borders and paddings are no longer added */
+  box-sizing: border-box; }
 
-.btn--white {
-  background-color: #fff;
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
   color: #777;
-}
+  padding: 3rem; }
 
-.btn::after {
-  /*contentanddisplayarecompulsorypropertiestobespecified*/
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  -webkit-border-radius: 10rem;
-  -moz-border-radius: 10rem;
-  -ms-border-radius: 10rem;
-  -o-border-radius: 10rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 0.4s;
-  -webkit-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  -ms-transition: all 0.4s;
-  -o-transition: all 0.4s;
-}
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  /*inordertofixtheshakynessofthetextwhenanimationends*/
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 3s ease-in;
+    -webkit-animation: moveInRight 1s ease-out; }
 
-.btn--white::after {
-  background-color: #fff;
-}
+.btn {
+  /* since it is a link so we should do :link */
+  /* when we click an element it is an active state */ }
+  .btn:link, .btn:visited {
+    display: inline-block;
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    font-size: 1.6rem;
+    border-radius: 10rem;
+    -webkit-border-radius: 10rem;
+    -moz-border-radius: 10rem;
+    -ms-border-radius: 10rem;
+    -o-border-radius: 10rem;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s; }
+  .btn:hover {
+    transform: translateY(-3px);
+    -webkit-transform: translateY(-3px);
+    -moz-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    -o-transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    /* when we hover the button then we want some psuedo effects */ }
+    .btn:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      -webkit-transform: scaleX(1.4) scaleY(1.6);
+      -moz-transform: scaleX(1.4) scaleY(1.6);
+      -ms-transform: scaleX(1.4) scaleY(1.6);
+      -o-transform: scaleX(1.4) scaleY(1.6);
+      /*inordertofadeout*/
+      opacity: 0; }
+  .btn:active {
+    transform: translateY(-1px);
+    -webkit-transform: translateY(-1px);
+    -moz-transform: translateY(-1px);
+    -ms-transform: translateY(-1px);
+    -o-transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  .btn--white {
+    background-color: #fff;
+    color: #777; }
+    .btn--white::after {
+      background-color: #fff; }
+  .btn::after {
+    /*contentanddisplayarecompulsorypropertiestobespecified*/
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    -webkit-border-radius: 10rem;
+    -moz-border-radius: 10rem;
+    -ms-border-radius: 10rem;
+    -o-border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s; }
+  .btn--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    -webkit-animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards; }
 
-/* when we hover the button then we want some psuedo effects */
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  -webkit-transform: scaleX(1.4) scaleY(1.6);
-  -moz-transform: scaleX(1.4) scaleY(1.6);
-  -ms-transform: scaleX(1.4) scaleY(1.6);
-  -o-transform: scaleX(1.4) scaleY(1.6);
-  /*inordertofadeout*/
-  opacity: 0;
-}
-
-.btn--animated {
-  animation: moveInBottom 0.5s ease-out 0.75s;
-  -webkit-animation: moveInBottom 0.5s ease-out 0.75s;
-  animation-fill-mode: backwards;
-}
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  position: relative;
+  /* cover tries to fit the element within the viewport 
+    so it adapts nicely to the changing viewport size  */
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%); }
