@@ -9,7 +9,7 @@ body {
 .heading-primary {
   color: $color-white;
   text-transform: uppercase;
-  /*inordertofixtheshakynessofthetextwhenanimationends*/
+  // in order to fix the shakyness of the text when animation ends
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   margin-bottom: 6rem;
@@ -58,4 +58,18 @@ body {
     -o-transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
 }
+}
+
+.heading-tertiary {
+  font-size: $default-font-size;
+  font-weight: 700;
+  text-transform: uppercase; 
+}
+
+.paragraph {
+  font-size: $default-font-size;
+  text-align: justify;
+  &:not(:last-child){
+    margin-bottom: 3rem;
+  }
 }
