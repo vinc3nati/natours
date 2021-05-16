@@ -23,6 +23,16 @@
     // Change for the <button> element
     border: none;
     cursor: pointer;
+
+    @include respond(phone) {
+      font-size: 1.4rem;
+      padding: 1rem 2rem;
+      border-radius: 8rem;
+      -webkit-border-radius: 8rem;
+      -moz-border-radius: 8rem;
+      -ms-border-radius: 8rem;
+      -o-border-radius: 8rem;
+    }
   }
 
   &:hover {
